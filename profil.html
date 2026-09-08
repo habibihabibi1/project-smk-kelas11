@@ -1,0 +1,331 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Profil - MyWebsite</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f6f8;
+            color: #222;
+        }
+
+        .header {
+            height: 70px;
+            background-color: white;
+            border-bottom: 1px solid #e5e5e5;
+            padding: 20px 30px;
+        }
+
+        .header h2 {
+            display: inline-block;
+            width: 60%;
+            font-size: 20px;
+        }
+
+        .nav {
+            display: inline-block;
+            width: 39%;
+            text-align: right;
+        }
+
+        .nav a {
+            display: inline-block;
+            text-decoration: none;
+            color: #555;
+            font-size: 14px;
+            margin-left: 20px;
+        }
+
+        .nav a:hover {
+            color: black;
+        }
+
+        .layout {
+            font-size: 0;
+            min-height: 650px;
+        }
+
+        .sidebar {
+            display: inline-block;
+            width: 20%;
+            min-height: 650px;
+            background-color: white;
+            border-right: 1px solid #e5e5e5;
+            padding: 25px 20px;
+            vertical-align: top;
+            font-size: 16px;
+        }
+
+        .sidebar h3 {
+            margin-bottom: 20px;
+            font-size: 14px;
+            color: #999;
+            text-transform: uppercase;
+        }
+
+        .sidebar ul {
+            list-style: none;
+        }
+
+        .sidebar li {
+            margin-bottom: 8px;
+        }
+
+        .sidebar a {
+            display: block;
+            padding: 12px 15px;
+            text-decoration: none;
+            color: #444;
+            border-radius: 8px;
+        }
+
+        .sidebar a:hover,
+        .sidebar .active {
+            background-color: #f0f1f3;
+            color: black;
+        }
+
+        .content {
+            display: inline-block;
+            width: 80%;
+            padding: 40px;
+            vertical-align: top;
+            font-size: 16px;
+        }
+
+        .content h1 {
+            margin-bottom: 10px;
+            font-size: 28px;
+        }
+
+        .content > p {
+            color: #666;
+            line-height: 1.7;
+        }
+
+        .card {
+            background-color: white;
+            padding: 25px;
+            margin-top: 25px;
+            border: 1px solid #e5e5e5;
+            border-radius: 12px;
+        }
+
+        .profile-header {
+            padding-bottom: 25px;
+            margin-bottom: 25px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .avatar {
+            display: inline-block;
+            width: 90px;
+            height: 90px;
+            background-color: #222;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 90px;
+            font-size: 30px;
+            font-weight: bold;
+            vertical-align: middle;
+            margin-right: 20px;
+        }
+
+        .profile-info {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .profile-info h2 {
+            margin-bottom: 8px;
+            font-size: 22px;
+        }
+
+        .profile-info p {
+            color: #777;
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+
+        .form-row {
+            font-size: 0;
+            margin-bottom: 18px;
+        }
+
+        .form-group {
+            display: inline-block;
+            width: 48%;
+            vertical-align: top;
+            font-size: 14px;
+        }
+
+        .form-group:first-child {
+            margin-right: 4%;
+        }
+
+        .form-group.full {
+            width: 100%;
+            margin-right: 0;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #444;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 14px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            outline: none;
+            font-size: 14px;
+            background-color: white;
+        }
+
+        textarea.form-control {
+            min-height: 110px;
+            resize: vertical;
+        }
+
+        .form-control:focus {
+            border-color: #888;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 11px 18px;
+            background-color: #222;
+            color: white;
+            text-decoration: none;
+            border-radius: 7px;
+            font-size: 14px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #444;
+        }
+
+        .footer {
+            background-color: white;
+            border-top: 1px solid #e5e5e5;
+            padding: 20px;
+            text-align: center;
+            font-size: 13px;
+            color: #777;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <h2>MyWebsite</h2>
+
+        <div class="nav">
+            <a href="#">Home</a>
+            <a href="#">Tentang</a>
+            <a href="#">Kontak</a>
+        </div>
+    </div>
+
+    <div class="layout">
+
+        <div class="sidebar">
+
+            <ul>
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="profil.html" class="active">Profil</a></li>
+                <li><a href="data.html">Data</a></li>
+                <li><a href="pengaturan.html">Pengaturan</a></li>
+            </ul>
+        </div>
+
+        <div class="content">
+
+            <h1>Profil</h1>
+
+            <p>
+                Lihat dan perbarui informasi profil akun Anda.
+            </p>
+
+            <div class="card">
+
+                <div class="profile-header">
+                    <div class="avatar">AS</div>
+
+                    <div class="profile-info">
+                        <h2>Andi Saputra</h2>
+                        <p>Administrator</p>
+                        <p>andi@gmail.com</p>
+                    </div>
+                </div>
+
+                <form>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Nama Lengkap</label>
+                            <input type="text" class="form-control" value="Andi Saputra">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" class="form-control" value="andi@gmail.com">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Nomor Telepon</label>
+                            <input type="text" class="form-control" value="081234567890">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Jabatan</label>
+                            <input type="text" class="form-control" value="Administrator">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group full">
+                            <label>Alamat</label>
+                            <textarea class="form-control">Batam, Kepulauan Riau</textarea>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn">
+                        Simpan Perubahan
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="footer">
+        © 2026 MyWebsite. All rights reserved.
+    </div>
+
+</body>
+</html>
+```

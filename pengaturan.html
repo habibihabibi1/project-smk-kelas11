@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pengaturan - MyWebsite</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f6f8;
+            color: #222;
+        }
+
+        .header {
+            height: 70px;
+            background-color: white;
+            border-bottom: 1px solid #e5e5e5;
+            padding: 20px 30px;
+        }
+
+        .header h2 {
+            display: inline-block;
+            width: 60%;
+            font-size: 20px;
+        }
+
+        .nav {
+            display: inline-block;
+            width: 39%;
+            text-align: right;
+        }
+
+        .nav a {
+            display: inline-block;
+            text-decoration: none;
+            color: #555;
+            font-size: 14px;
+            margin-left: 20px;
+        }
+
+        .nav a:hover {
+            color: black;
+        }
+
+        .layout {
+            font-size: 0;
+            min-height: 650px;
+        }
+
+        .sidebar {
+            display: inline-block;
+            width: 20%;
+            min-height: 650px;
+            background-color: white;
+            border-right: 1px solid #e5e5e5;
+            padding: 25px 20px;
+            vertical-align: top;
+            font-size: 16px;
+        }
+
+        .sidebar h3 {
+            margin-bottom: 20px;
+            font-size: 14px;
+            color: #999;
+            text-transform: uppercase;
+        }
+
+        .sidebar ul {
+            list-style: none;
+        }
+
+        .sidebar li {
+            margin-bottom: 8px;
+        }
+
+        .sidebar a {
+            display: block;
+            padding: 12px 15px;
+            text-decoration: none;
+            color: #444;
+            border-radius: 8px;
+        }
+
+        .sidebar a:hover,
+        .sidebar .active {
+            background-color: #f0f1f3;
+            color: black;
+        }
+
+        .content {
+            display: inline-block;
+            width: 80%;
+            padding: 40px;
+            vertical-align: top;
+            font-size: 16px;
+        }
+
+        .content h1 {
+            margin-bottom: 10px;
+            font-size: 28px;
+        }
+
+        .content > p {
+            color: #666;
+            line-height: 1.7;
+        }
+
+        .card {
+            background-color: white;
+            padding: 25px;
+            margin-top: 25px;
+            border: 1px solid #e5e5e5;
+            border-radius: 12px;
+        }
+
+        .card h3 {
+            margin-bottom: 8px;
+        }
+
+        .card > p {
+            color: #777;
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 22px;
+        }
+
+        .setting-item {
+            padding: 18px 0;
+            border-bottom: 1px solid #eee;
+            font-size: 0;
+        }
+
+        .setting-item:last-child {
+            border-bottom: none;
+        }
+
+        .setting-info {
+            display: inline-block;
+            width: 65%;
+            vertical-align: middle;
+            font-size: 14px;
+        }
+
+        .setting-info h4 {
+            font-size: 15px;
+            margin-bottom: 6px;
+        }
+
+        .setting-info p {
+            color: #777;
+            line-height: 1.5;
+        }
+
+        .setting-control {
+            display: inline-block;
+            width: 34%;
+            text-align: right;
+            vertical-align: middle;
+            font-size: 14px;
+        }
+
+        .form-control {
+            width: 100%;
+            max-width: 240px;
+            padding: 10px 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            outline: none;
+            font-size: 14px;
+            background-color: white;
+        }
+
+        .form-control:focus {
+            border-color: #888;
+        }
+
+        .toggle {
+            display: inline-block;
+            width: 46px;
+            height: 24px;
+            background-color: #ddd;
+            border-radius: 20px;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .toggle::after {
+            content: "";
+            position: absolute;
+            width: 18px;
+            height: 18px;
+            background-color: white;
+            border-radius: 50%;
+            top: 3px;
+            left: 4px;
+        }
+
+        .toggle.active {
+            background-color: #222;
+        }
+
+        .toggle.active::after {
+            left: 24px;
+        }
+
+        .button-area {
+            margin-top: 25px;
+            text-align: right;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 11px 18px;
+            background-color: #222;
+            color: white;
+            text-decoration: none;
+            border-radius: 7px;
+            font-size: 14px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #444;
+        }
+
+        .footer {
+            background-color: white;
+            border-top: 1px solid #e5e5e5;
+            padding: 20px;
+            text-align: center;
+            font-size: 13px;
+            color: #777;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <h2>MyWebsite</h2>
+
+        <div class="nav">
+            <a href="#">Home</a>
+            <a href="#">Tentang</a>
+            <a href="#">Kontak</a>
+        </div>
+    </div>
+
+    <div class="layout">
+
+        <div class="sidebar">
+            <ul>
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="profil.html">Profil</a></li>
+                <li><a href="data.html">Data</a></li>
+                <li><a href="pengaturan.html" class="active">Pengaturan</a></li>
+            </ul>
+        </div>
+
+        <div class="content">
+
+            <h1>Pengaturan</h1>
+
+            <p>
+                Atur preferensi akun dan pengaturan dasar website.
+            </p>
+
+            <div class="card">
+
+                <h3>Pengaturan Umum</h3>
+
+                <p>
+                    Sesuaikan beberapa pilihan dasar sesuai kebutuhan Anda.
+                </p>
+
+                <div class="setting-item">
+                    <div class="setting-info">
+                        <h4>Nama Website</h4>
+                        <p>Nama yang ditampilkan pada bagian header website.</p>
+                    </div>
+
+                    <div class="setting-control">
+                        <input type="text" class="form-control" value="MyWebsite">
+                    </div>
+                </div>
+
+                <div class="setting-item">
+                    <div class="setting-info">
+                        <h4>Bahasa</h4>
+                        <p>Pilih bahasa utama yang digunakan pada website.</p>
+                    </div>
+
+                    <div class="setting-control">
+                        <select class="form-control">
+                            <option>Bahasa Indonesia</option>
+                            <option>English</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="setting-item">
+                    <div class="setting-info">
+                        <h4>Notifikasi Email</h4>
+                        <p>Aktifkan notifikasi informasi terbaru melalui email.</p>
+                    </div>
+
+                    <div class="setting-control">
+                        <span class="toggle active"></span>
+                    </div>
+                </div>
+
+                <div class="setting-item">
+                    <div class="setting-info">
+                        <h4>Mode Pemeliharaan</h4>
+                        <p>Nonaktifkan akses pengguna ketika website sedang diperbarui.</p>
+                    </div>
+
+                    <div class="setting-control">
+                        <span class="toggle"></span>
+                    </div>
+                </div>
+
+                <div class="button-area">
+                    <button type="button" class="btn">
+                        Simpan Pengaturan
+                    </button>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="footer">
+        © 2026 MyWebsite. All rights reserved.
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f6f8;
+    color: #222;
+}
+
+.header{
+    height: 70px;
+    background-color: white;
+    border-bottom: 1px solid #e5e5e5;
+    padding: 20px 30px;
+}
+
+.header h2 {
+    display: inline-block;
+    width: 60%;
+    font-size: 20px;
+}
+.nav{
+    display: inline-block;
+    width: 39%;
+    text-align: right;
+}
+
+.header .nav a{
+    text-decoration: none;
+    color: #555;
+    font-size: 14px;
+    margin-left: 20px;
+}
+
+.header .nav a:hover{
+    color: black;
+}
+
+.layout{
+    min-height: 500px;
+}
+
+.sidebar{
+    display: inline-block;
+    width: 20%;
+    min-height: 500px;
+    background-color: white;
+    border-right: 1px solid #e5e5e5;
+    padding: 25px 20px;
+    font-size: 16px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar li{
+    margin-bottom: 8px;
+}
+
+.sidebar ul li a{
+    text-decoration: none;
+    display: block;
+    padding: 12px 15px;
+    color: #444;
+    border-radius: 8px;
+}
+.sidebar ul li a:hover{
+    background-color: #f0f1f3;
+    color: black;
+}
+
+.sidebar .active{
+    background-color: #f0f1f3;
+    color: black;
+}
+
+.content{
+    display: inline-block;
+    width: 79%;
+    padding: 40px;
+    font-size: 16px;
+    vertical-align: top;
+}
+
+.content h1{
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.card{
+    display: block;
+    background-color: white;
+    padding: 25px;
+    margin-top: 25px;
+    border: 1px solid #e5e5e5;
+    border-radius: 12px;
+}
+.footer{
+    display: block;
+    background-color: white;
+    border-top: 1px solid #e5e5e5;
+    padding: 20px;
+    text-align: center;
+    font-size: 13px;
+    color: #777;
+}
